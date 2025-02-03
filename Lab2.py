@@ -24,4 +24,10 @@ while True:
         print("Exits Program")
         #Use break to exit a loop/infinite loop
         break
+    elif(continue_loop.lower() == "y"):
+        continue
+    else:
+        print("Invalid Input")
+        continue_loop = input("Do you want to continue? (y/n)")
+        
         
