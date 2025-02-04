@@ -1,6 +1,10 @@
 nums = []
 numEntered = (input("Enter the number(s) (Ex: '1', or '1,2,3,4,5,6') of the list.\n"))
-nums.extend(numEntered.split(","))
+if("," in numEntered):
+    nums.extend(numEntered.split(","))
+else:
+    nums.extend(numEntered.split())    
+
 for i in range(len(nums)):
     nums[i] = int(nums[i])
 
