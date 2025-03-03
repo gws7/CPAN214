@@ -21,7 +21,7 @@ def divisionCheck(n):
         return "Your guess is divisible by 3"
 
 def winPercent(wins, count):
-    return round((wins/count),2)
+    return round(((wins/count)*100),2)
 
 def resetStats():
     global counter
@@ -46,12 +46,12 @@ while True:
         print(f"You have guessed correctly, the number was {guess}")
         score["wins"] += 1
         print(f"Wins: {score['wins']}, Losses: {score['losses']}, total games: {counter}")
-        print(winPercent(score["wins"], counter))
+        print("Win Percent: ", winPercent(score["wins"], counter),"%")
     else:
         print(f"Wrong, the number was {randomNumber}")
         score["losses"] +=1
         print(f"Wins: {score['wins']}, Losses: {score['losses']}, total games: {counter}")
-        print(winPercent(score["wins"], counter))
+        print("Win Percent: ", winPercent(score["wins"], counter),"%")
     
     #Asks user if they want to reset their game
     resetStats()
